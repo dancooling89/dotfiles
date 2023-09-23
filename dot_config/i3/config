@@ -18,6 +18,10 @@ font pango:monospace 8
 # Set the default border
 default_border none
 
+# Set the gaps
+gaps inner 10
+gaps outer 10
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8

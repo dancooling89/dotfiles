@@ -1,0 +1,6 @@
+#!/bin/sh
+[ -f ~/.zshrc ] && source ~/.zshrc
+echo $TERMINAL >>~/.envvariables_output
+echo $THEME_GREEN >>~/.envvariables_output
+#$TERMINAL
+#wezterm

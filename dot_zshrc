@@ -74,6 +74,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Source my theme env variables
+source $HOME/.config/scripts/themes/catppuccin.sh
+export TERMINAL="$(which wezterm)"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -114,3 +118,18 @@ PERL5LIB="/home/dan/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/dan/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/dan/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/dan/perl5"; export PERL_MM_OPT;
+
+# Add zoxide
+eval "$(zoxide init zsh)"
+
+# tmux smart session alias
+export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
+export PATH=$HOME/.config/tmux/plugins/t-smart-session-manager/bin:$PATH
+
+export GOPATH=$HOME/src/repos/go
+
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
